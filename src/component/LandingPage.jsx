@@ -28,7 +28,7 @@ export default function LandingWithPopup() {
   }
 
   return (
-    <div className="min-h-screen w-full relative bg-[#eadcff]">
+    <div className="md:h-screen h-fit w-full relative bg-[#eadcff]">
       {/* Top red band / logo area to match reference */}
       <div className="bg-red-700 text-white py-4">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-center">
@@ -37,8 +37,8 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="max-w-7xl mx-auto px-6 py-20 bg-[url('/banner.png')] bg-no-repeat bg-cover flex items-center gap-[40vw] relative">
-        <div className="flex-1 max-w-2xl">
+      <main className="w-full mx-auto px-6 py-20 bg-[url('/bannerfull.png')] bg-no-repeat bg-center bg-contain flex items-center gap-[15vw] relative">
+        <div className="flex-1 ml-20 max-w-2xl">
           <h1 className="text-6xl font-extrabold text-[#34101d]">MBA Online</h1>
           <p className="mt-4 text-lg text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
@@ -52,7 +52,7 @@ export default function LandingWithPopup() {
                 y: [0, -6, 0]   // bounce up + down
               }}
               transition={{
-                duration: 1.6,
+                duration: 1.2,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -149,7 +149,7 @@ export default function LandingWithPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-start md:items-center justify-center p-6 bg-black/40"
+            className="fixed inset-0 z-50 flex pt-28 md:items-center justify-center  p-6 bg-black/40"
           >
             <motion.div
               initial={{ y: -30, scale: 0.96, opacity: 0 }}
@@ -158,25 +158,25 @@ export default function LandingWithPopup() {
               transition={{ duration: 0.36 }}
               className="w-full max-w-md bg-white rounded-lg shadow-2xl relative overflow-hidden"
             >
-              <div className="h-2 bg-red-600" />
+              <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500" />
 
               <button onClick={() => setShowModal(false)} aria-label="Close" className="absolute right-3 top-4 w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shadow">
-                <span className="text-red-600 font-bold">✕</span>
+                <span className="text-black-600 hover:text-red-500 font-bold hover:brightness-90 hover:rotate-90 transition duration-300">✕</span>
               </button>
 
-              <div className="p-6 pt-10">
-                <h2 className="text-2xl font-extrabold text-center">Inquire Now</h2>
+              <div className="p-3 pt-4">
+                <h2 className="text-2xl font-extrabold font-serif text-center">Inquire Now</h2>
                 <p className="text-center text-sm text-gray-500 mt-1">Admissions Open</p>
 
-                <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+                <form onSubmit={handleSubmit} className="mt-6 space-y-2">
                   <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
 
-                  <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
+                  <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-red-200" />
 
                   <input required placeholder="Email" type="email" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
 
-                  <select className="w-full border border-gray-300 rounded px-3 py-2">
-                    <option>--None--</option>
+                  <select className="w-full border outline-none border-gray-300 rounded px-3 py-2">
+                    <option>State</option>
                     <option>Andhra Pradesh</option>
                     <option>Arunachal Pradesh</option>
                     <option>Assam</option>
@@ -207,15 +207,16 @@ export default function LandingWithPopup() {
                     <option>West Bengal</option>
                   </select>
 
-                  <select className="w-full border border-gray-300 rounded px-3 py-2">
+                  <select className="w-full border outline-none border-gray-300 rounded px-3 py-2">
                     <option>Online MBA</option>
+                    <option>Help Us Guide You</option>
                   </select>
 
-                  <div className="mt-3">
+                  <div className="mt-2">
                     <div className="bg-yellow-300 text-center text-sm p-2 rounded">Your Personal information is secure with us</div>
                   </div>
 
-                  <button type="submit" className="w-full mt-3 bg-red-600 text-white rounded py-2 font-medium hover:brightness-95 transition">Submit</button>
+                  <button type="submit" className="w-full mt-1 bg-red-600 text-white rounded py-2 font-medium hover:brightness-95 transition">Submit</button>
                 </form>
               </div>
             </motion.div>
