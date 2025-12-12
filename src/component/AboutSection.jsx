@@ -1,15 +1,53 @@
 import React from "react";
 
 export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
+  const stats = [
+    {
+      value: "1,56,000+",
+      label: "Active Students",
+      bg: "#3A2342",
+      icon: (
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" className="opacity-30">
+          <path d="M4 18h16" stroke="white" strokeWidth="1.4" strokeLinecap="round"/>
+          <path d="M12 3L5 7v4c0 5 3 7 7 7s7-2 7-7V7l-7-4z" stroke="white" strokeWidth="1.4"/>
+        </svg>
+      ),
+    },
+    {
+      value: "27,000+",
+      label: "Alumni",
+      bg: "#D4B676",
+      textColor: "#1C1C1C",
+      icon: (
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" className="opacity-40">
+          <circle cx="12" cy="7" r="3" stroke="black" strokeWidth="1.4"/>
+          <path d="M5 21c1-4 3-6 7-6s6 2 7 6" stroke="black" strokeWidth="1.4"/>
+        </svg>
+      ),
+    },
+    {
+      value: "600+",
+      label: "Locations across India",
+      prefix: "Students from",
+      bg: "#3A2342",
+      icon: (
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" className="opacity-30">
+          <circle cx="12" cy="7" r="3" stroke="white" strokeWidth="1.4"/>
+          <path d="M4 21c1-4 3-6 8-6s7 2 8 6" stroke="white" strokeWidth="1.4"/>
+          <path d="M17 4l3 3-3 3" stroke="white" strokeWidth="1.4" strokeLinecap="round"/>
+        </svg>
+      ),
+    },
+  ];
   return (
     <section
-      className="relative bg-contain h-[fit] bg-center bg-no-repeat backdrop-blur-3xl text-white"
+      className="relative bg-cover h-[65vh] bg-center mb-40  bg-no-repeat backdrop-blur-3xl  text-white"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6  text-center">
 
         {/* About Heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-[#d7b56d]">
@@ -24,7 +62,7 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
           management system to provide interactive learning on connected platforms 24/7.
         </p>
 
-        <p className="max-w-4xl mx-auto text-lg leading-relaxed font-medium mt-6">
+        <p className="max-w-4xl mx-auto text-lg leading-relaxed font-medium mt-2">
           NMIMS CDOE is changing the dynamics of higher education delivery in India while
           empowering students across India and enabling them to fulfil their dreams and aspirations.
         </p>
@@ -36,26 +74,46 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
         <div className="w-16 h-1 bg-[#d7b56d] mx-auto mt-3"></div>
 
         {/* Forte Stats */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+        <section className="w-full bg-transparent py-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {/* Card 1 */}
-          <div className="bg-[#38183A] rounded-sm p-10 text-left shadow-lg flex flex-col justify-between">
-            <div className="text-4xl font-bold">1,56,000+</div>
-            <div className="text-sm mt-2 font-medium opacity-90">Active Students</div>
-          </div>
+        {stats.map((item, i) => (
+          <div
+            key={i}
+            className="relative rounded-lg shadow-lg overflow-hidden p-8 flex items-start justify-between min-h-45"
+            style={{ backgroundColor: item.bg }}
+          >
+            {/* ICON */}
+            <div className="absolute top-4 right-4">{item.icon}</div>
 
-          {/* Card 2 */}
-          <div className="bg-[#D0B06E] text-black rounded-sm p-10 text-left shadow-lg flex flex-col justify-between">
-            <div className="text-4xl font-bold">27,000+</div>
-            <div className="text-sm mt-2 font-medium opacity-90">Alumni</div>
-          </div>
+            {/* TEXT */}
+            <div className="relative z-10">
+              {item.prefix && (
+                <p className="text-white font-semibold text-sm mb-1 opacity-90 tracking-wide">
+                  {item.prefix}
+                </p>
+              )}
 
-          {/* Card 3 */}
-          <div className="bg-[#38183A] rounded-sm p-10 text-left shadow-lg flex flex-col justify-between">
-            <div className="text-4xl font-bold">600+</div>
-            <div className="text-sm mt-2 font-medium opacity-90">Students from Locations across India</div>
+              <h3
+                className="text-4xl font-extrabold"
+                style={{ color: item.textColor || "white" }}
+              >
+                {item.value}
+              </h3>
+
+              <p
+                className="mt-2 text-base font-semibold opacity-90"
+                style={{ color: item.textColor || "white" }}
+              >
+                {item.label}
+              </p>
+            </div>
           </div>
-        </div>
+        ))}
+
+      </div>
+    </section>
+
       </div>
     </section>
   );
