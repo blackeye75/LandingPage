@@ -1,0 +1,269 @@
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function LandingWithPopup() {
+  const [showCookie, setShowCookie] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  // delays (ms)
+  const COOKIE_DELAY = 1800; // cookie appears first
+  const MODAL_DELAY = 2500; // modal appears after cookie (total)
+
+  useEffect(() => {
+    const c = setTimeout(() => setShowCookie(true), COOKIE_DELAY);
+    const m = setTimeout(() => setShowModal(true), MODAL_DELAY);
+
+    return () => {
+      clearTimeout(c);
+      clearTimeout(m);
+    };
+  }, []);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setShowModal(false);
+    setShowCookie(false);
+    // TODO: replace with real API call
+    alert("Thanks — form submitted (wire up your API)");
+  }
+
+  return (
+    <div className="min-h-screen w-full relative bg-[#eadcff]">
+      {/* Top red band / logo area to match reference */}
+      <div className="bg-red-700 text-white py-4">
+        <div className="max-w-6xl mx-auto px-6 flex items-center justify-center">
+          <div className="text-center font-semibold"><img src="./logo.webp" alt="" /></div>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <main className="max-w-7xl mx-auto px-6 py-20 bg-[url('/banner.png')] bg-no-repeat bg-cover flex items-center gap-[40vw] relative">
+        <div className="flex-1 max-w-2xl">
+          <h1 className="text-6xl font-extrabold text-[#34101d]">MBA Online</h1>
+          <p className="mt-4 text-lg text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+        </div>
+
+        {/* right inline floating form (always visible on larger screens) */}
+        <aside className="w-96 hidden lg:block">
+          <div className="relative">
+            {/* phone badge */}
+            <motion.div
+              animate={{
+                y: [0, -6, 0]   // bounce up + down
+              }}
+              transition={{
+                duration: 1.6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute -top-6 left-24 z-10"
+            >
+              <div className="bg-red-700 text-white px-4 py-2 rounded-lg shadow-md flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.21.39 2.39.78 3.53a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.55-1.55a2 2 0 0 1 2.11-.45c1.14.39 2.32.66 3.53.78A2 2 0 0 1 22 16.92z"
+                    stroke="white"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="font-semibold">+91-7065090560</span>
+              </div>
+            </motion.div>
+
+            <div className="bg-white p-6 rounded shadow-lg border-t-4 border-red-100">
+              <h3 className="text-2xl font-serif">Inquire Now</h3>
+              <p className="font-medium text-sm mt-1">Admissions Open.</p>
+
+              <form onSubmit={handleSubmit} className="mt-3 space-y-1">
+                <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-3 py-2" />
+                <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-3 py-2" />
+                <input required type="email" placeholder="Email" className="w-full border border-gray-300 rounded px-3 py-2" />
+
+                <label className="text-sm font-semibold">State/Province:</label>
+                <select className="w-full border border-gray-300 rounded px-2 py-2">
+                  <option value="">--None--</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chhattisgarh</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+
+                  {/* Union Territories */}
+                  <option>Andaman and Nicobar Islands</option>
+                  <option>Chandigarh</option>
+                  <option>Dadra and Nagar Haveli and Daman & Diu</option>
+                  <option>Delhi</option>
+                  <option>Jammu and Kashmir</option>
+                  <option>Ladakh</option>
+                  <option>Lakshadweep</option>
+                  <option>Puducherry</option>
+                </select>
+
+
+                <label className="text-sm font-semibold">Choose a Program:</label>
+                <select className="w-full border border-gray-300 rounded px-3 py-2">
+                  <option>Online MBA</option>
+                  <option>Help me decide</option>
+                </select>
+
+                <div className="mt-2">
+                  <div className="bg-yellow-300 text-center text-xs p-2 rounded">Your Personal information is secure with us</div>
+                </div>
+
+                <button type="submit" className="w-full mt-2 bg-red-700 text-white rounded py-2 font-medium">Submit</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      {/* Modal popup that appears after delay (centered) - same form but styled like overlay */}
+      <AnimatePresence>
+        {showModal && (
+          <motion.div
+            key="backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-start md:items-center justify-center p-6 bg-black/40"
+          >
+            <motion.div
+              initial={{ y: -30, scale: 0.96, opacity: 0 }}
+              animate={{ y: 0, scale: 1, opacity: 1 }}
+              exit={{ y: 20, scale: 0.96, opacity: 0 }}
+              transition={{ duration: 0.36 }}
+              className="w-full max-w-md bg-white rounded-lg shadow-2xl relative overflow-hidden"
+            >
+              <div className="h-2 bg-red-600" />
+
+              <button onClick={() => setShowModal(false)} aria-label="Close" className="absolute right-3 top-4 w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shadow">
+                <span className="text-red-600 font-bold">✕</span>
+              </button>
+
+              <div className="p-6 pt-10">
+                <h2 className="text-2xl font-extrabold text-center">Inquire Now</h2>
+                <p className="text-center text-sm text-gray-500 mt-1">Admissions Open</p>
+
+                <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+                  <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
+
+                  <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
+
+                  <input required placeholder="Email" type="email" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
+
+                  <select className="w-full border border-gray-300 rounded px-3 py-2">
+                    <option>--None--</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                  </select>
+
+                  <select className="w-full border border-gray-300 rounded px-3 py-2">
+                    <option>Online MBA</option>
+                  </select>
+
+                  <div className="mt-3">
+                    <div className="bg-yellow-300 text-center text-sm p-2 rounded">Your Personal information is secure with us</div>
+                  </div>
+
+                  <button type="submit" className="w-full mt-3 bg-red-600 text-white rounded py-2 font-medium hover:brightness-95 transition">Submit</button>
+                </form>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Cookie banner */}
+      <AnimatePresence>
+        {showCookie && (
+          <motion.div
+            initial={{ y: 80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 80, opacity: 0 }}
+            transition={{ duration: 0.36 }}
+            className="fixed left-0 right-0 bottom-0 z-50"
+          >
+            <div className="max-w-7xl mx-auto px-6 py-4 bg-white/95 rounded-t-md shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+              <p className="text-sm text-gray-800 max-w-3xl">
+                Cookies are being used on this site to make your user experience better. When you click any links on this page, you give us consent to set cookies
+              </p>
+
+              <div className="flex gap-3">
+                <button onClick={() => setShowCookie(false)} className="px-4 py-2 border rounded-full bg-white text-gray-800 shadow-sm">Ok</button>
+                <button onClick={() => alert('Open privacy policy (replace with real link)')} className="px-4 py-2 rounded-full bg-slate-800 text-white">Privacy & Cookies Policy</button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* whatsapp floating button (bottom-right) */}
+      <motion.div
+        animate={{
+          y: [0, -10, 0]   // floating bounce effect
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="fixed right-6 bottom-6 z-50"
+      >
+        <div className="w-14 h-14 rounded-full bg-emerald-500 shadow-lg flex items-center justify-center text-white text-2xl cursor-pointer hover:scale-110 transition">
+          💬
+        </div>
+      </motion.div>
+
+    </div>
+  );
+}
