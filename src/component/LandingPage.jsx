@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
+import '../index.css';
 
 export default function LandingWithPopup() {
   const [showCookie, setShowCookie] = useState(false);
@@ -37,10 +39,10 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full mx-auto px-6 py-20 bg-[url('/bannerfull.png')] bg-no-repeat bg-center bg-contain flex items-center gap-[15vw] relative">
-        <div className="flex-1 ml-20 max-w-2xl">
-          <h1 className="text-6xl font-extrabold text-[#34101d]">MBA Online</h1>
-          <p className="mt-4 text-lg text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')] overflow-hidden bg-no-repeat bg-center bg-contain flex sm:items-center px-1 items-start gap-[15vw] relative">
+        <div className="flex-1 sm:-mt-34 sm:ml-20 mt-8   max-w-2xl">
+          <h1 className="text-7xl leading-[6.5vh] sm:leading-7.5 font-['Space_Grotesk'] sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
+          <p className="sm:mt-3 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}
@@ -76,12 +78,12 @@ export default function LandingWithPopup() {
               <p className="font-medium text-sm mt-1">Admissions Open.</p>
 
               <form onSubmit={handleSubmit} className="mt-3 space-y-1">
-                <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-3 py-2" />
-                <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-3 py-2" />
-                <input required type="email" placeholder="Email" className="w-full border border-gray-300 rounded px-3 py-2" />
+                <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
+                <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
+                <input required type="email" placeholder="Email" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
 
                 <label className="text-sm font-semibold">State/Province:</label>
-                <select className="w-full border border-gray-300 rounded px-2 py-2">
+                <select className="w-full border border-gray-300 rounded px-2 py-1 outline-none text-sm">
                   <option value="">--None--</option>
                   <option>Andhra Pradesh</option>
                   <option>Arunachal Pradesh</option>
@@ -125,7 +127,7 @@ export default function LandingWithPopup() {
 
 
                 <label className="text-sm font-semibold">Choose a Program:</label>
-                <select className="w-full border border-gray-300 rounded px-3 py-2">
+                <select className="w-full border border-gray-300 rounded px-2 py-1 outline-none text-sm">
                   <option>Online MBA</option>
                   <option>Help me decide</option>
                 </select>
@@ -134,7 +136,7 @@ export default function LandingWithPopup() {
                   <div className="bg-yellow-300 text-center text-xs p-2 rounded">Your Personal information is secure with us</div>
                 </div>
 
-                <button type="submit" className="w-full mt-2 bg-red-700 text-white rounded py-2 font-medium">Submit</button>
+                <button type="submit" className="w-full mt-1 bg-red-700 text-white rounded py-2 font-medium">Submit</button>
               </form>
             </div>
           </div>
@@ -169,13 +171,13 @@ export default function LandingWithPopup() {
                 <p className="text-center text-sm text-gray-500 mt-1">Admissions Open</p>
 
                 <form onSubmit={handleSubmit} className="mt-6 space-y-2">
-                  <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
+                  <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
 
-                  <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-red-200" />
+                  <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
 
-                  <input required placeholder="Email" type="email" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-200" />
+                  <input required placeholder="Email" type="email" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
 
-                  <select className="w-full border outline-none border-gray-300 rounded px-3 py-2">
+                  <select className="w-full border border-gray-300 rounded px-2 py-1 outline-none text-sm">
                     <option>State</option>
                     <option>Andhra Pradesh</option>
                     <option>Arunachal Pradesh</option>
@@ -207,7 +209,7 @@ export default function LandingWithPopup() {
                     <option>West Bengal</option>
                   </select>
 
-                  <select className="w-full border outline-none border-gray-300 rounded px-3 py-2">
+                  <select className="w-full border border-gray-300 rounded px-2 py-1 outline-none text-sm">
                     <option>Online MBA</option>
                     <option>Help Us Guide You</option>
                   </select>
@@ -260,8 +262,9 @@ export default function LandingWithPopup() {
         }}
         className="fixed right-6 bottom-6 z-50"
       >
-        <div className="w-14 h-14 rounded-full bg-emerald-500 shadow-lg flex items-center justify-center text-white text-2xl cursor-pointer hover:scale-110 transition">
-          💬
+        <div className="w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-white text-2xl cursor-pointer hover:scale-120 transition">
+          <FaWhatsapp className="text-cyan-400 
+             drop-shadow-[0_0_6px_#22d3ee]" />
         </div>
       </motion.div>
 

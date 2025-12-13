@@ -41,7 +41,7 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
   ];
   return (
     <section
-      className="relative bg-cover h-[65vh] bg-center mb-40  bg-no-repeat backdrop-blur-3xl  text-white"
+      className="relative bg-cover h-[65vh]  bg-center mb-40  bg-no-repeat backdrop-blur-3xl  text-white"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* dark overlay */}
@@ -76,15 +76,14 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
         {/* Forte Stats */}
         <section className="w-full bg-transparent py-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
         {stats.map((item, i) => (
           <div
             key={i}
-            className="relative rounded-lg shadow-lg overflow-hidden p-8 flex items-start justify-between min-h-45"
+            className=" rounded-lg shadow-lg overflow-hidden p-4   flex flex-col items-center min-h-40"
             style={{ backgroundColor: item.bg }}
           >
             {/* ICON */}
-            <div className="absolute top-4 right-4">{item.icon}</div>
+            <div className=" top-4 right-4">{item.icon}</div>
 
             {/* TEXT */}
             <div className="relative z-10">

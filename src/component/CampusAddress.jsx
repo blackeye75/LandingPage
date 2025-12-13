@@ -2,8 +2,8 @@ import React from "react";
 
 export default function CampusAddress({ imageSrc = "/nmims-campus.jpg" }) {
   return (
-    <section className="w-full mt-16 bg-white text-[#38183A]">
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+    <section className="w-full sm:mt-16  bg-white text-[#38183A]">
+      <div className="max-w-7xl mx-auto px-6 sm:py-14 pt-[50vh] grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
         {/* LEFT CONTENT */}
         <div>
