@@ -39,15 +39,16 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')] overflow-hidden bg-no-repeat bg-center bg-contain flex sm:items-center px-1 items-start gap-[15vw] relative">
+      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')] overflow-hidden bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
+      {/* //left */}
         <div className="flex-1 sm:-mt-34 sm:ml-20 mt-8   max-w-2xl">
-          <h1 className="text-7xl leading-[6.5vh] sm:leading-7.5 font-['Space_Grotesk'] sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
-          <p className="sm:mt-3 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+          <h1 className="text-7xl leading-[6.5vh] sm:leading-7.5 sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
+          <p className="sm:mt-4 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}
-        <aside className="w-96 hidden lg:block">
-          <div className="relative">
+        <aside className="w-96  relative">
+          <div className="absolute w-full left-1/2 sm:top-0 top-[50vh] -translate-x-1/2 -translate-y-1/2 ">
             {/* phone badge */}
             <motion.div
               animate={{
@@ -73,14 +74,107 @@ export default function LandingWithPopup() {
               </div>
             </motion.div>
 
+            {/* form div */}
+
             <div className="bg-white p-6 rounded shadow-lg border-t-4 border-red-100">
               <h3 className="text-2xl font-serif">Inquire Now</h3>
+              <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5" />
               <p className="font-medium text-sm mt-1">Admissions Open.</p>
+              <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-1/3 " />
 
-              <form onSubmit={handleSubmit} className="mt-3 space-y-1">
-                <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
-                <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
-                <input required type="email" placeholder="Email" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
+              <form onSubmit={handleSubmit} className="mt-3 space-y-2">
+                <div className="relative w-full">
+                  <input
+                    required
+                    id="fullName"
+                    type="text"
+                    placeholder=" "
+                    className="
+      peer
+      w-full
+      border border-gray-300
+      rounded
+      px-2 py-1
+      text-sm
+      outline-none
+      focus:border-red-600
+    "
+                  />
+
+                  <label
+                    htmlFor="fullName"
+                    className="
+      absolute
+      left-2
+      top-1.5
+      text-gray-400
+      text-xs
+      bg-white
+      px-1
+      transition-all
+      pointer-events-none
+
+      peer-placeholder-shown:top-1.5
+      peer-placeholder-shown:text-xs
+
+      peer-focus:-top-2
+      peer-focus:text-[10px]
+      peer-focus:text-red-600
+    "
+                  >
+                    Full Name
+                  </label>
+                </div>
+
+                {/* w-full border border-gray-300 rounded px-2 py-1 outline-none */}
+                <div className="relative w-full">
+                  <input
+                    required
+                    id="mobile"
+                    type="tel"
+                    placeholder=" "
+                    className="peer w-full border border-gray-300 rounded px-2 py-1 text-sm outline-none focus:border-red-600"
+                  />
+
+                  <label
+                    htmlFor="mobile"
+                    className="
+      absolute left-2 top-1.5
+      text-xs text-gray-400
+      bg-white px-1
+      transition-all pointer-events-none
+      peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-red-600
+    "
+                  >
+                    Mobile
+                  </label>
+                </div>
+
+
+                <div className="relative w-full">
+                  <input
+                    required
+                    id="email"
+                    type="email"
+                    placeholder=" "
+                    className="peer w-full border border-gray-300 rounded px-2 py-1 text-sm outline-none focus:border-red-600"
+                  />
+
+                  <label
+                    htmlFor="email"
+                    className="
+      absolute left-2 top-1.5
+      text-xs text-gray-400
+      bg-white px-1
+      transition-all pointer-events-none
+      peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-red-600
+    "
+                  >
+                    Email
+                  </label>
+                </div>
+
+
 
                 <label className="text-sm font-semibold">State/Province:</label>
                 <select className="w-full border border-gray-300 rounded px-2 py-1 outline-none text-sm">
@@ -170,7 +264,7 @@ export default function LandingWithPopup() {
                 <h2 className="text-2xl font-extrabold font-serif text-center">Inquire Now</h2>
                 <p className="text-center text-sm text-gray-500 mt-1">Admissions Open</p>
 
-                <form onSubmit={handleSubmit} className="mt-6 space-y-2">
+                <form onSubmit={handleSubmit} className="mt-6 space-y-2 ">
                   <input required placeholder="Full Name" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />
 
                   <input required placeholder="Mobile" className="w-full border border-gray-300 rounded px-2 py-1 outline-none" />

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ElevateCard({ imageSrc = '/hero-person.png' }) {
   return (
-    <section className="max-w-6xl mx-auto mt-10 px-6 py-8">
+    <section className="max-w-6xl mx-auto sm:mt-10 mt-[40vh] px-6 py-8">
       <div className="bg-white rounded-md shadow-2xl overflow-hidden flex flex-col md:flex-row items-stretch">
         {/* Left image panel */}
         <div className="md:w-1/3 bg-[#ef6f39] p-8 flex items-center justify-center relative">
