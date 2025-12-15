@@ -72,7 +72,7 @@ export default function LandingWithPopup() {
               }}
               className="absolute -top-3 left-24 z-10"
             >
-              <div className="bg-red-700 text-white px-4 py-2 rounded-lg shadow-md flex items-center gap-3">
+              <div className="bg-red-700 text-white  sm:px-4 px-2 sm:py-1 py-2 rounded-lg shadow-md flex items-center gap-3">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.21.39 2.39.78 3.53a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.55-1.55a2 2 0 0 1 2.11-.45c1.14.39 2.32.66 3.53.78A2 2 0 0 1 22 16.92z"
                     stroke="white"
