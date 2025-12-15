@@ -49,12 +49,18 @@ export default function LandingWithPopup() {
         {/* right inline floating form (always visible on larger screens) */}
         <aside className="sm:w-screen w-[96] z-50 relative">
           <div className="
-    absolute sm:w-fit w-screen
-    right-1/2 top-[35vh]
-    translate-x-1/2 translate-y-0
+    absolute
+    w-screen
+    left-1/2
+    top-[35vh]
+    -translate-x-1/2
 
-    sm:left-[43vw] sm:top-0
-    sm:-translate-x-1/2 sm:-translate-y-1/2">
+    sm:w-fit
+    sm:left-[43vw]
+    sm:top-0
+    sm:-translate-x-1/2
+    sm:-translate-y-1/2
+">
             {/* phone badge */}
             <motion.div
               animate={{
