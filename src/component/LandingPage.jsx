@@ -30,7 +30,7 @@ export default function LandingWithPopup() {
   }
 
   return (
-    <div className="md:h-screen h-fit w-full relative bg-[#eadcff] sm:overflow-hidden">
+    <div className="md:h-screen h-fit sm:mb-0 mb-24 w-full relative bg-[#eadcff] sm:overflow-hidden">
       {/* Top red band / logo area to match reference */}
       <div className="bg-red-700 text-white py-4">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-center">
@@ -70,7 +70,7 @@ export default function LandingWithPopup() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute -top-3 left-24 z-10"
+              className="absolute -top-3 sm:left-24 left-28 z-10"
             >
               <div className="bg-red-700 text-white  sm:px-4 px-2 sm:py-1 py-2 rounded-lg shadow-md flex items-center gap-3">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
