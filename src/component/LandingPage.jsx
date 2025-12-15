@@ -39,16 +39,22 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')] overflow-hidden bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
-      {/* //left */}
-        <div className="flex-1 sm:-mt-34 sm:ml-20 mt-8   max-w-2xl">
-          <h1 className="text-7xl leading-[6.5vh] sm:leading-7.5 sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
+      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]  bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
+        {/* //left */}
+        <div className="flex-1  sm:ml-20 mt-0 max-w-3xl">
+          <h1 className="text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
           <p className="sm:mt-4 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}
-        <aside className="w-96  relative">
-          <div className="absolute w-full left-1/2 sm:top-0 top-[50vh] -translate-x-1/2 -translate-y-1/2 ">
+        <aside className="sm:w-screen w-[96] z-50 relative">
+          <div className="
+    absolute sm:w-fit w-full
+    right-1/2 top-[35vh]
+    translate-x-1/2 translate-y-0
+
+    sm:left-[43vw] sm:top-0
+    sm:-translate-x-1/2 sm:-translate-y-1/2">
             {/* phone badge */}
             <motion.div
               animate={{
@@ -76,7 +82,7 @@ export default function LandingWithPopup() {
 
             {/* form div */}
 
-            <div className="bg-white p-6 rounded shadow-lg border-t-4 border-red-100">
+            <div className="bg-white sm:w-96 p-6 rounded shadow-lg border-t-4 border-red-100">
               <h3 className="text-2xl font-serif">Inquire Now</h3>
               <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5" />
               <p className="font-medium text-sm mt-1">Admissions Open.</p>

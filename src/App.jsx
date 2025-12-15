@@ -85,7 +85,9 @@ function App() {
   return (
     <>
       <LandingWithPopup />
+      <div className=' ' >
       <ElevateCard imageSrc='https://edukyu.com/nmimsonlinemba/assets-cxp/bfr_img1.jpg' />
+      </div>
       <SpecialisationsSection backgroundUrl='https://images.unsplash.com/photo-1588580000645-4562a6d2c839?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
       {/* <LeadFeatures /> */}
       <AutoCarouselFeatures items={features} autoPlayMs={3500} transitionMs={600} />
