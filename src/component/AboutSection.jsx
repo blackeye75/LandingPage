@@ -50,7 +50,7 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
       <div className="relative z-10 max-w-6xl mx-auto px-6  text-center">
 
         {/* About Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-[#d7b56d]">
+        <h2 className="text-4xl md:text-5xl pt-8 font-bold text-[#d7b56d]">
           About
         </h2>
         <div className="w-16 h-1 bg-[#d7b56d] mx-auto mt-3 mb-10"></div>

@@ -30,7 +30,7 @@ export default function LandingWithPopup() {
   }
 
   return (
-    <div className="md:h-screen h-fit w-full relative bg-[#eadcff]">
+    <div className="md:h-screen h-fit w-full relative bg-[#eadcff] sm:overflow-hidden">
       {/* Top red band / logo area to match reference */}
       <div className="bg-red-700 text-white py-4">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-center">
@@ -39,7 +39,7 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]  bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
+      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
         {/* //left */}
         <div className="flex-1  sm:ml-20 mt-0 max-w-3xl">
           <h1 className="text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
@@ -49,7 +49,7 @@ export default function LandingWithPopup() {
         {/* right inline floating form (always visible on larger screens) */}
         <aside className="sm:w-screen w-[96] z-50 relative">
           <div className="
-    absolute sm:w-fit w-full
+    absolute sm:w-fit w-fit
     right-1/2 top-[35vh]
     translate-x-1/2 translate-y-0
 
@@ -82,7 +82,7 @@ export default function LandingWithPopup() {
 
             {/* form div */}
 
-            <div className="bg-white sm:w-96 p-6 rounded shadow-lg border-t-4 border-red-100">
+            <div className="bg-white sm:w-96 w-screen p-6 rounded shadow-lg border-t-4 border-red-100">
               <h3 className="text-2xl font-serif">Inquire Now</h3>
               <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5" />
               <p className="font-medium text-sm mt-1">Admissions Open.</p>
@@ -126,11 +126,15 @@ export default function LandingWithPopup() {
       peer-focus:-top-2
       peer-focus:text-[10px]
       peer-focus:text-red-600
+
+      peer-not-placeholder-shown:-top-2
+      peer-not-placeholder-shown:text-[10px]
     "
                   >
                     Full Name
                   </label>
                 </div>
+
 
                 {/* w-full border border-gray-300 rounded px-2 py-1 outline-none */}
                 <div className="relative w-full">
@@ -139,7 +143,16 @@ export default function LandingWithPopup() {
                     id="mobile"
                     type="tel"
                     placeholder=" "
-                    className="peer w-full border border-gray-300 rounded px-2 py-1 text-sm outline-none focus:border-red-600"
+                    className="
+      peer
+      w-full
+      border border-gray-300
+      rounded
+      px-2 py-1
+      text-sm
+      outline-none
+      focus:border-red-600
+    "
                   />
 
                   <label
@@ -149,12 +162,22 @@ export default function LandingWithPopup() {
       text-xs text-gray-400
       bg-white px-1
       transition-all pointer-events-none
-      peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-red-600
+
+      peer-placeholder-shown:top-1.5
+      peer-placeholder-shown:text-xs
+
+      peer-focus:-top-2
+      peer-focus:text-[10px]
+      peer-focus:text-red-600
+
+      peer-not-placeholder-shown:-top-2
+      peer-not-placeholder-shown:text-[10px]
     "
                   >
                     Mobile
                   </label>
                 </div>
+
 
 
                 <div className="relative w-full">
@@ -163,7 +186,16 @@ export default function LandingWithPopup() {
                     id="email"
                     type="email"
                     placeholder=" "
-                    className="peer w-full border border-gray-300 rounded px-2 py-1 text-sm outline-none focus:border-red-600"
+                    className="
+      peer
+      w-full
+      border border-gray-300
+      rounded
+      px-2 py-1
+      text-sm
+      outline-none
+      focus:border-red-600
+    "
                   />
 
                   <label
@@ -173,12 +205,22 @@ export default function LandingWithPopup() {
       text-xs text-gray-400
       bg-white px-1
       transition-all pointer-events-none
-      peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-red-600
+
+      peer-placeholder-shown:top-1.5
+      peer-placeholder-shown:text-xs
+
+      peer-focus:-top-2
+      peer-focus:text-[10px]
+      peer-focus:text-red-600
+
+      peer-not-placeholder-shown:-top-2
+      peer-not-placeholder-shown:text-[10px]
     "
                   >
                     Email
                   </label>
                 </div>
+
 
 
 
