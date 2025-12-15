@@ -30,7 +30,7 @@ export default function LandingWithPopup() {
   }
 
   return (
-    <div className="md:h-screen h-fit sm:mb-0 mb-24 w-full relative bg-[#eadcff] sm:overflow-hidden">
+    <div className="md:h-screen h-fit sm:mb-0  w-full relative bg-[#eadcff] sm:overflow-hidden">
       {/* Top red band / logo area to match reference */}
       <div className="bg-red-700 text-white py-4">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-center">
@@ -62,9 +62,7 @@ export default function LandingWithPopup() {
 ">
             {/* phone badge */}
             <motion.div
-              animate={{
-                y: [0, -6, 0]   // bounce up + down
-              }}
+              animate={{ y: [0, -6, 0] }}
               transition={{
                 duration: 1.2,
                 repeat: Infinity,
@@ -72,18 +70,44 @@ export default function LandingWithPopup() {
               }}
               className="absolute -top-3 sm:left-24 left-28 z-10"
             >
-              <div className="bg-red-700 text-white  sm:px-4 px-2 sm:py-1 py-2 rounded-lg shadow-md flex items-center gap-3">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.21.39 2.39.78 3.53a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.55-1.55a2 2 0 0 1 2.11-.45c1.14.39 2.32.66 3.53.78A2 2 0 0 1 22 16.92z"
+              <div
+                className="
+      bg-red-700 text-white
+      sm:px-4 px-6
+      sm:py-1 py-2
+      rounded-lg shadow-md
+
+      inline-flex items-center
+      gap-2 sm:gap-3
+      whitespace-nowrap
+      leading-none
+    "
+              >
+                {/* FIXED SVG */}
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="block shrink-0"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.21.39 2.39.78 3.53a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.55-1.55a2 2 0 0 1 2.11-.45c1.14.39 2.32.66 3.53.78A2 2 0 0 1 22 16.92z"
                     stroke="white"
                     strokeWidth="1.2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="font-semibold">+91-7065090560</span>
+
+                {/* FIXED TEXT */}
+                <span className="text-sm font-semibold leading-none">
+                  +91-7065090560
+                </span>
               </div>
             </motion.div>
+
 
             {/* form div */}
 
