@@ -82,7 +82,7 @@ export default function LandingWithPopup() {
 
             {/* form div */}
 
-            <div className="bg-white sm:w-96 w-screen p-6 rounded shadow-lg border-t-4 border-red-100">
+            <div className="bg-white sm:w-96 w-screen p-4 rounded shadow-lg border-t-4 border-red-100">
               <h3 className="text-2xl font-serif">Inquire Now</h3>
               <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5" />
               <p className="font-medium text-sm mt-1">Admissions Open.</p>
@@ -293,14 +293,14 @@ export default function LandingWithPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex pt-28 md:items-center justify-center  p-6 bg-black/40"
+            className="fixed inset-0 z-50 flex pt-[30vh] md:items-center justify-center   p-6 bg-black/40"
           >
             <motion.div
               initial={{ y: -30, scale: 0.96, opacity: 0 }}
               animate={{ y: 0, scale: 1, opacity: 1 }}
               exit={{ y: 20, scale: 0.96, opacity: 0 }}
               transition={{ duration: 0.36 }}
-              className="w-full max-w-md bg-white rounded-lg shadow-2xl relative overflow-hidden"
+              className="w-full max-w-md bg-white h-fit rounded-lg shadow-2xl relative overflow-hidden"
             >
               <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500" />
 
