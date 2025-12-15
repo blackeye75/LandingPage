@@ -74,7 +74,7 @@ export default function LandingWithPopup() {
                 className="
       bg-red-700 text-white
       sm:px-4 px-6
-      sm:py-1 py-2
+      sm:py-2 py-2
       rounded-lg shadow-md
 
       inline-flex items-center
