@@ -39,11 +39,11 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full sm:min-h-screen h-[55vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat sm:bg-center sm:bg-contain bg-cover bg-bottom sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
+      <main className="w-full sm:min-h-screen h-[60vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat sm:bg-center sm:bg-contain bg-cover bg-bottom sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
         {/* //left */}
         <div className="flex-1  sm:ml-20 sm:mt-[-20vh] mt-1 max-w-3xl">
-          <h1 className="text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal sm:font-bold font-medium text-[#34101d]">MBA Online</h1>
-          <p className="sm:mt-4 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+          <h1 className="sm:text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal sm:font-bold text-[12vw] font-medium text-[#34101d]">MBA Online</h1>
+          <p className="sm:mt-4 sm:text-lg text-xs  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}
@@ -51,7 +51,7 @@ export default function LandingWithPopup() {
           <div className="
      absolute
     inset-x-0
-    top-[35vh]
+    top-[55vh]
     px-0
 
     sm:w-fit
@@ -111,7 +111,7 @@ export default function LandingWithPopup() {
 
             {/* form div */}
 
-            <div className="bg-white sm:w-96 w-screen p-4 rounded shadow-lg border-t-4 border-red-100">
+            <div className="bg-white sm:w-96 w-screen sm:mt-0 mt-2 p-4 rounded shadow-lg border-t-4 border-red-100">
               <h3 className="text-2xl font-serif">Inquire Now</h3>
               <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5" />
               <p className="font-medium text-sm mt-1">Admissions Open.</p>
