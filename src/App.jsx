@@ -83,7 +83,7 @@ function App() {
     requestAnimationFrame(raf);
   });
   return (
-    <>
+    <div className='overflow-hidden' >
       <LandingWithPopup />
       <div className=' ' >
       <ElevateCard imageSrc='https://edukyu.com/nmimsonlinemba/assets-cxp/bfr_img1.jpg' />
@@ -93,7 +93,7 @@ function App() {
       <AutoCarouselFeatures items={features} autoPlayMs={3500} transitionMs={600} />
       <AboutSection bgImage='https://images.unsplash.com/photo-1565502663138-84933158ca50?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
       <CampusAddress imageSrc='https://edukyu.com/nmimsonlinemba/assets-cxp/nmims_ofc.png' />
-    </>
+    </div>
   )
 }
 
