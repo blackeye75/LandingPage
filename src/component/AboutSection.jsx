@@ -71,7 +71,7 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
         <h3 className="text-3xl md:text-4xl font-bold text-[#d7b56d] mt-16">
           NMIMS CDOE Forte
         </h3>
-        <div className="w-16 h-1 bg-[#d7b56d] mx-auto mt-3"></div>
+        <div className="w-16 h-1 bg-white mx-auto mt-3"></div>
 
         {/* Forte Stats */}
         <section className="w-full bg-transparent py-10">
@@ -89,7 +89,7 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
             <div className="relative z-10">
               {item.prefix && (
                 <p className="text-white font-semibold text-sm mb-1 opacity-90 tracking-wide">
-                  {item.prefix}
+                  {/* {item.prefix} */}
                 </p>
               )}
 

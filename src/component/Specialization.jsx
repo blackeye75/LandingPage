@@ -12,8 +12,8 @@ export default function SpecialisationsSection({ backgroundUrl = '/library-bg.jp
       <div className="relative max-w-7xl mx-auto px-6 py-20">
         {/* Title */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-yellow-300">MBA Online Specialisations</h2>
-          <div className="w-16 h-1 bg-yellow-300 mx-auto mt-3" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white">MBA Online Specialisations</h2>
+          <div className="w-16 h-1 bg-white mx-auto mt-3" />
         </div>
 
         {/* Card */}
