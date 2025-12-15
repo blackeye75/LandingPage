@@ -41,7 +41,7 @@ export default function AboutSection({ bgImage = "/bg-campus.jpg" }) {
   ];
   return (
     <section
-      className="relative bg-cover sm:h-[35vw]   bg-center mb-40  bg-no-repeat backdrop-blur-3xl  text-white"
+      className="relative bg-cover sm:h-[35vw]   bg-center sm:mb-40 mb-16  bg-no-repeat backdrop-blur-3xl  text-white"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* dark overlay */}

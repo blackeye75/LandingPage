@@ -378,7 +378,7 @@ export default function LandingWithPopup() {
             transition={{ duration: 0.36 }}
             className="fixed left-0 right-0 bottom-0 z-50"
           >
-            <div className="max-w-7xl mx-auto px-6 py-4 bg-white/95 rounded-t-md shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="max-w-full mx-auto px-6 py-4 bg-white/95 rounded-t-md shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-gray-800 max-w-3xl">
                 Cookies are being used on this site to make your user experience better. When you click any links on this page, you give us consent to set cookies
               </p>
