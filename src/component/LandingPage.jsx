@@ -9,7 +9,7 @@ export default function LandingWithPopup() {
 
   // delays (ms)
   const COOKIE_DELAY = 1800; // cookie appears first
-  const MODAL_DELAY = 2500; // modal appears after cookie (total)
+  const MODAL_DELAY = 3500; // modal appears after cookie (total)
 
   useEffect(() => {
     const c = setTimeout(() => setShowCookie(true), COOKIE_DELAY);
@@ -49,7 +49,7 @@ export default function LandingWithPopup() {
         {/* right inline floating form (always visible on larger screens) */}
         <aside className="sm:w-screen w-[96] z-50 relative">
           <div className="
-    absolute sm:w-fit w-fit
+    absolute sm:w-fit w-screen
     right-1/2 top-[35vh]
     translate-x-1/2 translate-y-0
 
@@ -293,7 +293,7 @@ export default function LandingWithPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex pt-[30vh] md:items-center justify-center   p-6 bg-black/40"
+            className="fixed inset-0 z-50 flex pt-[25vh] sm:pt-[25vh] md:items-center justify-center   p-6 bg-black/40"
           >
             <motion.div
               initial={{ y: -30, scale: 0.96, opacity: 0 }}
