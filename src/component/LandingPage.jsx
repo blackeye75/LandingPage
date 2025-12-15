@@ -42,7 +42,7 @@ export default function LandingWithPopup() {
       <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
         {/* //left */}
         <div className="flex-1  sm:ml-20 mt-0 max-w-3xl">
-          <h1 className="text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal font-extrabold text-[#34101d]">MBA Online</h1>
+          <h1 className="text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal font-bold text-[#34101d]">MBA Online</h1>
           <p className="sm:mt-4 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
