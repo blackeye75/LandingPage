@@ -39,9 +39,9 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat bg-center bg-contain sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
+      <main className="w-full sm:min-h-screen h-[50vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat sm:bg-center sm:bg-contain bg-contain bg-bottom sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
         {/* //left */}
-        <div className="flex-1  sm:ml-20 mt-0 max-w-3xl">
+        <div className="flex-1  sm:ml-20 -sm:mt-24 mt-8 max-w-3xl">
           <h1 className="text-7xl leading-[6.5vh] sm:leading-16 sm:tracking-wide tracking-normal font-bold text-[#34101d]">MBA Online</h1>
           <p className="sm:mt-4 text-lg  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
@@ -57,7 +57,7 @@ export default function LandingWithPopup() {
     sm:w-fit
     sm:inset-x-auto
     sm:right-16
-    sm:top-1/2
+    sm:top-0
     sm:-translate-y-1/2 
 ">
             {/* phone badge */}
@@ -70,7 +70,7 @@ export default function LandingWithPopup() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="absolute -top-6 left-24 z-10"
+              className="absolute -top-3 left-24 z-10"
             >
               <div className="bg-red-700 text-white px-4 py-2 rounded-lg shadow-md flex items-center gap-3">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
