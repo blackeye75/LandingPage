@@ -12,8 +12,8 @@ export default function SpecialisationsSection({ backgroundUrl = '/library-bg.jp
       <div className="relative max-w-7xl mx-auto px-6 py-20">
         {/* Title */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white">MBA Online Specialisations</h2>
-          <div className="w-16 h-1 bg-white mx-auto mt-3" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl sm:font-extrabold font-bold sm:leading-none leading-[3.5vh] text-white">MBA Online Specialisations</h2>
+          <div className="w-16 h-1 bg-white mx-auto sm:mt-4 mt-2" />
         </div>
 
         {/* Card */}
@@ -28,30 +28,30 @@ export default function SpecialisationsSection({ backgroundUrl = '/library-bg.jp
           </div>
 
           <div className="p-12 min-h-[220px]">
-            <ul className="space-y-6 max-w-3xl ml-4">
+            <ul className="sm:space-y-6 space-y-3 max-w-3xl ml-4">
               <li className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#3d1630] mt-2 rounded-full" />
-                <span className="font-semibold text-[#3d1630]">Business Management</span>
+                <span className=" font-medium sm:font-semibold text-[#3d1630]">Business Management</span>
               </li>
 
               <li className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#3d1630] mt-2 rounded-full" />
-                <span className="font-semibold text-[#3d1630]">Marketing Management</span>
+                <span className=" font-medium sm:font-semibold text-[#3d1630]">Marketing Management</span>
               </li>
 
               <li className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#3d1630] mt-2 rounded-full" />
-                <span className="font-semibold text-[#3d1630]">Financial Management</span>
+                <span className=" font-medium sm:font-semibold text-[#3d1630]">Financial Management</span>
               </li>
 
               <li className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#3d1630] mt-2 rounded-full" />
-                <span className="font-semibold text-[#3d1630]">Human Resource Management</span>
+                <span className=" font-medium sm:font-semibold text-[#3d1630]">Human Resource Management</span>
               </li>
 
               <li className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-[#3d1630] mt-2 rounded-full" />
-                <span className="font-semibold text-[#3d1630]">Operations & Data Science Management</span>
+                <span className=" font-medium sm:font-semibold text-[#3d1630]">Operations & Data Science Management</span>
               </li>
             </ul>
           </div>

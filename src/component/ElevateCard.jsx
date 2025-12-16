@@ -25,19 +25,19 @@ export default function ElevateCard({ imageSrc = '/hero-person.png' }) {
         </div>
 
         {/* Right text panel */}
-        <div className="md:w-2/3 p-10 bg-white relative">
+        <div className="md:w-2/3 sm:p-10 p-6 bg-white relative">
           {/* faint decorative line art (pseudo background) */}
           <svg className="absolute right-6 top-6 opacity-10 w-48 h-48" viewBox="0 0 200 200" fill="none">
             <path d="M10 100 C 40 10, 160 10, 190 100" stroke="#6b2a6a" strokeWidth="3" />
             <path d="M10 140 C 40 50, 160 50, 190 140" stroke="#6b2a6a" strokeWidth="2" />
           </svg>
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#3a1630] leading-tight">Elevate Your Career</h2>
-          <div className="w-16 h-0.5 bg-[#3a1630] mt-4 mb-6"></div>
+          <h2 className="text-2xl md:text-5xl  font-semibold text-[#3a1630] leading-tight">Elevate Your Career</h2>
+          <div className="w-16 h-0.5 bg-[#3a1630] sm:mt-4 sm:mb-6 mt-2 mb-4"></div>
 
-          <h3 className="text-lg md:text-xl font-bold text-[#2b1b2b]">An MBA program to launch your career to the next level!</h3>
+          <h3 className="text-lg md:text-xl font-semibold sm:leading-none leading-tight  sm:font-bold text-[#2b1b2b]">An MBA program to launch your career to the next level!</h3>
 
-          <p className="mt-4 text-gray-700 max-w-2xl">
+          <p className="mt-4 sm:leading-none leading-[2.5vh] text-gray-700 max-w-2xl">
             Get ready to take your career to the next level with NMIMS CDOE's MBA program. Our five contemporary
             specialisations are designed for working professionals like you, offering flexible learning options from
             expert faculty. Gain the skills and knowledge needed to succeed in today's competitive business landscape.
