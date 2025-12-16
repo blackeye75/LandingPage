@@ -44,9 +44,37 @@ export default function LandingWithPopup() {
         <div className="flex-1  sm:ml-20 sm:mt-[-20vh] mt-0 max-w-3xl">
           <h1 className="sm:text-7xl leading-[5.5vh] sm:leading-[4.5vw] sm:tracking-wide sm:font-bold text-[40px] tracking-tighter font-medium text-[#34101d]">MBA Online</h1>
 
-           <div className="h-0.5 w-[50vw] sm:w-[29vw] tracking-tight sm:tracking-tighter -mt-1 sm:mt-0 bg-linear-to-r from-amber-500 via-orange-500 to-red-500" />
+          <div
+            className="
+    h-px 
+    w-[50vw] sm:w-[29vw] 
+    tracking-tight sm:tracking-tighter 
+    -mt-1 sm:-mt-0.5 
+    bg-linear-to-r from-amber-500 via-orange-500 to-red-500
+    origin-left
+  "
+            style={{
+              transform: "scaleX(0)",
+              animation: "underlineGrow 2s ease-out forwards",
+            }}
+          />
 
-          <p className="sm:mt-1 mt-0  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+
+          <p className="sm:mt-0 mt-0.5  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+          <div
+            className="
+    h-px 
+    w-[40vw] sm:w-[16vw] 
+    tracking-tight sm:tracking-tighter 
+    -mt-0.5 sm:-mt-0.5 
+    bg-linear-to-r from-amber-500 via-orange-500 to-red-500
+    origin-left
+  "
+            style={{
+              transform: "scaleX(0)",
+              animation: "underlineGrow 2s ease-out forwards",
+            }}
+          />
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}
@@ -115,10 +143,27 @@ export default function LandingWithPopup() {
             {/* form div */}
 
             <div className="bg-white sm:w-96 w-screen sm:mt-0 mt-2 p-4 rounded shadow-lg border-t-4 border-red-100">
+
               <h3 className="text-2xl font-serif">Inquire Now</h3>
-              <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5" />
+
+              <div
+                className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-2/5 origin-left"
+                style={{
+                  transform: "scaleX(0)",
+                  animation: "underlineGrow 1s ease-out forwards",
+                }}
+              />
+
               <p className="font-medium text-sm mt-1">Admissions Open.</p>
-              <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-1/3 " />
+
+              <div
+                className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500 w-1/3 origin-left"
+                style={{
+                  transform: "scaleX(0)",
+                  animation: "underlineGrow 4s ease-out forwards",
+                }}
+              />
+
 
               <form onSubmit={handleSubmit} className="mt-3 space-y-2">
                 <div className="relative w-full">
