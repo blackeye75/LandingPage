@@ -46,7 +46,7 @@ export default function LandingWithPopup() {
 
            <div className="h-0.5 w-[50vw] sm:w-[29vw] tracking-tight sm:tracking-tighter -mt-1 sm:mt-0 bg-linear-to-r from-amber-500 via-orange-500 to-red-500" />
 
-          <p className="sm:mt-4 mt-0  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+          <p className="sm:mt-1 mt-0  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}
