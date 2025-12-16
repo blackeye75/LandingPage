@@ -49,7 +49,7 @@ export default function LandingWithPopup() {
     h-px 
     w-[50vw] sm:w-[29vw] 
     tracking-tight sm:tracking-tighter 
-    -mt-1 sm:-mt-0.5 
+    -mt-1.5 sm:-mt-0.5 
     bg-linear-to-r from-amber-500 via-orange-500 to-red-500
     origin-left
   "
@@ -60,7 +60,7 @@ export default function LandingWithPopup() {
           />
 
 
-          <p className="sm:mt-0 mt-0.5  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+          <p className="sm:mt-0 mt-[.1vh]  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
           <div
             className="
     h-px 
@@ -379,8 +379,14 @@ export default function LandingWithPopup() {
               transition={{ duration: 0.36 }}
               className="w-full max-w-md bg-white h-fit rounded-lg shadow-2xl relative overflow-hidden"
             >
-              <div className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500" />
-
+              <div className="w-full">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 7, ease: "easeOut", delay: 0.4 }}
+                  className="h-0.5 bg-linear-to-r from-amber-500 via-orange-500 to-red-500"
+                />
+              </div>
               <button onClick={() => setShowModal(false)} aria-label="Close" className="absolute right-3 top-4 w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shadow">
                 <span className="text-black-600 hover:text-red-500 font-bold hover:brightness-90 hover:rotate-90 transition duration-300">✕</span>
               </button>
