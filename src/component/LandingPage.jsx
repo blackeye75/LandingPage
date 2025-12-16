@@ -39,11 +39,14 @@ export default function LandingWithPopup() {
       </div>
 
       {/* Hero */}
-      <main className="w-full sm:min-h-screen h-[30vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]   bg-no-repeat sm:bg-center sm:bg-contain bg-contain  bg-top-right sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
+      <main className="w-full sm:min-h-screen h-[30vh] mx-auto sm:px-0 sm:py-3 bg-[url('/bannerfull.png')]  bg-no-repeat sm:bg-center sm:bg-contain bg-contain  bg-top-right sm:flex sm:items-center px-1 items-start gap-[15vw] relative">
         {/* //left */}
         <div className="flex-1  sm:ml-20 sm:mt-[-20vh] mt-0 max-w-3xl">
           <h1 className="sm:text-7xl leading-[5.5vh] sm:leading-[4.5vw] sm:tracking-wide sm:font-bold text-[40px] tracking-tighter font-medium text-[#34101d]">MBA Online</h1>
-          <p className="sm:mt-4  sm:text-lg text-xs  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
+
+           <div className="h-0.5 w-[50vw] sm:w-[29vw] tracking-tight sm:tracking-tighter -mt-1 sm:mt-0 bg-linear-to-r from-amber-500 via-orange-500 to-red-500" />
+
+          <p className="sm:mt-4 mt-0  sm:text-lg text-xs  tracking-tight  text-[#4b3a45]">One Degree, Unlimited opportunities</p>
         </div>
 
         {/* right inline floating form (always visible on larger screens) */}

@@ -8,13 +8,13 @@ export default function CampusAddress({ imageSrc = "/nmims-campus.jpg" }) {
         {/* LEFT CONTENT */}
         <div>
           {/* Heading */}
-          <h2 className="text-4xl font-bold mb-3">
+          <h2 className="text-4xl sm:font-bold font-medium sm:leading-none leading-[4.5vh] sm:tracking-normal  mb-3">
             NMIMS Mumbai Campus Address:
           </h2>
           <div className="w-16 h-1 bg-[#38183A] mb-8"></div>
 
           {/* Address Text */}
-          <p className="text-lg leading-relaxed">
+          <p className="sm:text-lg text-[1.3rem] sm:font-normal sm:leading-relaxed leading-[3vh]">
             NMIMS CDOE, 2nd Floor, NMIMS Building, V. L., Pherozeshah Mehta Rd, Vile
             Parle West, Mumbai, Maharashtra 400056
           </p>
